@@ -1,0 +1,44 @@
+{
+  "parser": "vue-eslint-parser",
+  "globals": {
+      "process": true,
+      "$API": true
+  },
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:vue/vue3-recommended",
+      "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 12,
+      "parser": "@typescript-eslint/parser",
+      "sourceType": "module"
+  },
+  "plugins": [
+      "vue",
+      "@typescript-eslint"
+  ],
+  "rules": {
+      "vue/valid-v-for": "off",
+      "vue/no-v-html": "off",
+      "vue/require-v-for-key": "off",
+      "vue/require-default-prop": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "indent": ["error", 2],
+      "linebreak-style": ["error", "unix"],
+      "quotes": ["error", "single"],
+      "semi": ["error","always"],
+      "space-before-blocks": "error",
+      "space-before-function-paren": "error",
+      "no-multi-spaces": "error", // 删除不必要的空格
+      "no-useless-escape":"off",
+      "no-empty-function": "off"
+  }
+}

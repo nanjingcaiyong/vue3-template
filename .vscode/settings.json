@@ -1,0 +1,55 @@
+{
+  "javascript.validate.enable": true,
+  "css.validate": true,
+  "less.validate": true,
+  "stylelint.validate": ["css", "less", "vue"], // 指定stylelint生效的文件类型
+  "html.validate.scripts": true,
+  "javascript.updateImportsOnFileMove.enabled": "always", // 启用或禁用在 VS Code 中重命名或移动文件时自动更新导入路径的功能
+  "explorer.confirmDelete": false,
+  "git.autofetch": true, // 这个属性可以让 VS Code 自动去检测 Git 远端是否有发生新的更改，推荐设置为true。
+  "workbench.iconTheme": "vscode-icons", // 文件图标
+  "files.eol": "\n", // 行尾字符
+  "files.autoSave": "afterDelay", // 选项卡失焦，自动保存
+  "liveServer.settings.donotShowInfoMsg": true, // 关闭liveserver提示
+  "[vue]": {
+    "editor.defaultFormatter": "johnsoncodehk.volar"
+  },
+  "eslint.validate": [
+    "typescript",
+    "vue",
+  ], // eslint校验vue、typescript
+  "vetur.validation.template": true,
+  "vetur.validation.style": true,
+  "vetur.validation.script": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html", // 格式化vue中的template
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.options.tabSize": 2, // 手动格式化vue文件时的缩进
+  "editor.fontFamily": "'Fira Code'", // 编辑器字体
+  "editor.fontLigatures": true, // 是否启用字体连字，配和字体'Fira Code'使用
+  "editor.tabSize": 2, // 一个tab两个空格
+  "editor.fontSize": 20, // 编辑器字体大小
+  "editor.mouseWheelZoom": true, // command缩放编辑器
+  "editor.renderWhitespace": "trailing", // 代码前面缩进符, 无、空格、竖划线
+  "editor.renderControlCharacters": true, // 是否显示控制字符。在编辑器中显示的像很小的BS, 表示backspace的意思。一般是在输入时，按了后退或者删除会偶尔出现这个字符。
+  "editor.wordWrap": "on", // 内容超出可视区域自动换行
+  "editor.suggestSelection": "recentlyUsedByPrefix", // 这个属性是用来设置建议值的，就是我们在输入co时，编辑器提示我们const这个功能。推荐设置为first——即每次默认选中推荐值第一个，比如你输入co，推荐值为const和constant（按顺序），那么就会选择const。当然，我也推荐设置为recentlyUsedByPrefix，即上次你选择或者输入过什么，这次就默认选中什么，比如你输入co，推荐值为const和constant（按顺序），上次你选择了constant，这次就还是默认选中cosntant
+  "editor.codeActionsOnSave": { // 保存自动格式化
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.fixAll.stylelint": true
+    
+  },
+  "terminal.integrated.fontFamily": "monospace", // 终端字体
+  "gitlens.advanced.messages": { // 配置gitlen中git提交历史记录的信息显示情况
+    "suppressGitMissingWarning": true
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+  "window.zoomLevel": 1,
+  "i18n-ally.localesPaths": [
+    "src/language",
+    "src/pages/language"
+  ]
+}

@@ -1,0 +1,1 @@
+export { createFromIconfontCN } from './iconFont';
