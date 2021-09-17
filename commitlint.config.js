@@ -7,8 +7,8 @@ module.exports = {
       [
         'feat', // 新功能
         'fix', // 修补bug
+        'css', // 修改样式
         'style', // 代码格式修改（空白，格式，缺少分号等），不影响代码含义的更改
-        'feature', // 新功能（feature）
         'perf', // 改进性能的代码更改
         'ci', // 对CI配置文件和脚本的更改
         'docs', // 文档（documentation）
