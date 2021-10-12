@@ -5,6 +5,7 @@ const config = require('../config/index.js');
 const routers = require('../src/router');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackBar = require('webpackbar');
 
 const { ModuleFederationPlugin } = webpack.container;
 const { VueLoaderPlugin } = VueLoader;
@@ -108,6 +109,7 @@ const baseConfig = {
     ]
   },
   plugins: [
+    new WebpackBar(),
     new VueLoaderPlugin(),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'vendor',
