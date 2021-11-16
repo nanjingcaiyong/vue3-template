@@ -1,6 +1,6 @@
 var gitBranchIs = require('git-branch-is');
 var shell = require('shelljs');
 
-gitBranchIs('master').then(() => {
+gitBranchIs('test').then(() => {
   shell.echo('npx standard-version');
 });
