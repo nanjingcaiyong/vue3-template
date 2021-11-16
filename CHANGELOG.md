@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.2...v0.0.3) (2021-11-16)
+
+
+### Bug Fixes
+
+* button lable ([5615ec7](https://github.com/nanjingcaiyong/vue3-template/commit/5615ec7ee332b68c5514446b7047bcb73f1c3f6f))
+
 ### 0.0.2 (2021-11-16)
 
 
