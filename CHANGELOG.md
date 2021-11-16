@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.4...v0.0.5) (2021-11-16)
+
+
+### Features
+
+* chna ([287dc3d](https://github.com/nanjingcaiyong/vue3-template/commit/287dc3d4f6d9506e94a5c026e913c146a9727795))
+
 ### [0.0.4](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.3...v0.0.4) (2021-11-16)
 
 
