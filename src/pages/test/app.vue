@@ -1,5 +1,5 @@
 <template>
   <div>
-    <c-button>滴哦安吉</c-button>
+    <c-button>测试</c-button>
   </div>
 </template>

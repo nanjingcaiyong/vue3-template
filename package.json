@@ -1,6 +1,6 @@
 {
   "name": "vue-mpa",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev:sit",
@@ -30,6 +30,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.13.0",
     "cupshe-element": "^1.8.14",
+    "standard-version": "^9.3.2",
     "vue": "^3.1.1"
   },
   "lint-staged": {
@@ -84,7 +85,6 @@
     "rimraf": "^3.0.2",
     "sass": "^1.32.12",
     "sass-loader": "^11.1.1",
-    "standard-version": "^9.3.1",
     "style-loader": "^2.0.0",
     "stylelint": "^13.13.1",
     "stylelint-order": "^4.1.0",

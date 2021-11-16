@@ -6,11 +6,6 @@
  */
 module.exports = [
   {
-    name: 'shipping',
-    path: 'shipping',
-    title: '物流'
-  },
-  {
     name: 'test',
     path: 'test',
     title: '物流'
