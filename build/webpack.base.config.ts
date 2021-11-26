@@ -1,15 +1,14 @@
-const VueLoader = require('vue-loader');
-const webpack = require('webpack');
-const fs = require('fs');
-const config = require('../config/index.js');
-const routers = require('../src/router');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackBar = require('webpackbar');
+import { VueLoaderPlugin } from 'vue-loader';
+import * as webpack from 'webpack';
+import fs from 'fs';
+import config from '../config/index';
+import routers from '../src/router';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import WebpackBar from 'webpackbar';
 
 const { ModuleFederationPlugin } = webpack.container;
-const { VueLoaderPlugin } = VueLoader;
-const loaders = require('./vue-loader.config.js');
+import loaders from './vue-loader.config';
 const moduleName = process.argv[3]; // 获取脚本参数
 
 const devMode = process.env.NODE_ENV !== 'production';
@@ -20,10 +19,10 @@ const devMode = process.env.NODE_ENV !== 'production';
  * @param { string } moduleName 指定的页面名称
  * @returns { Object } entry
  */
-function getEntries (rootName, moduleName) {
+function getEntries (rootName: string, moduleName: string) {
   if (fs.existsSync(rootName)) {
     return moduleName === undefined 
-      ? fs.readdirSync(rootName).reduce((entry,pageName) => {
+      ? fs.readdirSync(rootName).reduce((entry: any,pageName) => {
         entry[pageName] = `./${rootName}/${pageName}/index.ts`;
         return entry;
       }, {})
@@ -39,9 +38,9 @@ const entryObj = getEntries('src/pages', moduleName);
  * @param {*} pageNames 所有的pagename
  * @param {*} baseConfig 基础配置
  */
-function appendHtmlPlugins (pageNames, baseConfig) {
+function appendHtmlPlugins (_pageNames:any, baseConfig:any) {
   routers.forEach(page => {
-    baseConfig.plugins.push(new HtmlWebpackPlugin({
+    (baseConfig?.plugins || [])?.push(new HtmlWebpackPlugin({
       template: `./src/pages/${page.name}/index.html`, 
       filename: `${page.path}/index.html`,
       app: `<div id="${page.name}"></div>`,
@@ -52,7 +51,7 @@ function appendHtmlPlugins (pageNames, baseConfig) {
   });
 }
 
-const baseConfig = {
+const baseConfig: webpack.Configuration = {
   experiments: {
     topLevelAwait: true, // 能够在顶层使用await, 方便es6动态导入(仅支持webpack5)
   },
@@ -109,7 +108,7 @@ const baseConfig = {
     ]
   },
   plugins: [
-    new WebpackBar(),
+    new WebpackBar({}),
     new VueLoaderPlugin(),
     // new webpack.optimize.CommonsChunkPlugin({
     //   name: 'vendor',
@@ -131,11 +130,11 @@ const baseConfig = {
   ]
 };
 
-devMode || baseConfig.plugins.push(new MiniCssExtractPlugin({
+devMode || (baseConfig?.plugins || [])?.push(new MiniCssExtractPlugin({
   filename: '[name]/css/[name].css' ,
   chunkFilename: '[name]/css/[id].css' ,
 }));
 
 appendHtmlPlugins(Object.keys(entryObj) ,baseConfig);
 
-module.exports = baseConfig;
+export default baseConfig;

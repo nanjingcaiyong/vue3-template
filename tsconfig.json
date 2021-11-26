@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "target": "ES2021",
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
@@ -12,6 +12,7 @@
     "removeComments": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "esnext",
       "dom"
@@ -30,6 +31,11 @@
       "@UI/*": [
         "Shopify-UI/*"
       ]
+    }
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
     }
   },
   "include": [

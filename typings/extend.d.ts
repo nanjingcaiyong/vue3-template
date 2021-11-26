@@ -4,3 +4,5 @@ interface ApiConfig {
   type: string,
   moduleName?: string
 }
+
+declare module 'mini-css-extract-plugin';

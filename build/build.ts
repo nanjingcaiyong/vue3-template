@@ -1,12 +1,12 @@
-const ora = require('ora'); // 控制台中显示loading等图标
-const chalk = require('chalk'); // 修改控制台字符串样式
-const webpack = require('webpack');
-const webpackConfig = require('./webpack.prd.config.js');
+import ora from 'ora'; // 控制台中显示loading等图标
+import chalk from 'chalk'; // 修改控制台字符串样式
+import webpack from 'webpack';
+import webpackConfig from './webpack.prd.config';
 
 const spinner = ora('building for ' + process.env.NODE_ENV);
 spinner.start();
 
-webpack(webpackConfig, (err, stats) => {
+webpack(webpackConfig, (err, stats:any) => {
   spinner.stop();
   if (err) throw err;
   process.stdout.write(stats.toString({

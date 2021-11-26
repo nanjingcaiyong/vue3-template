@@ -1,9 +1,9 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const config = require('../config');
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import config from '../config';
 const devMode = process.env.NODE_ENV !== 'production';
 
-const cssLoaders = function (options) {
-  const generateLoaders = (loader, loaderOptions) => {
+const cssLoaders = function (options:any) {
+  const generateLoaders = (loader: string, loaderOptions?:any) => {
     return {
       test: new RegExp(`\\.${loader}$`),
       use: [
@@ -36,4 +36,4 @@ const loaders = cssLoaders({
     : config.dev.sourceMap,
 });
 
-module.exports = loaders;
+export default loaders;

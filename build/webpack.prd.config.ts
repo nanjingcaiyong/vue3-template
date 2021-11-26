@@ -1,13 +1,11 @@
-const baseWebpackConfig = require('./webpack.base.config.js');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackMerge = require('webpack-merge');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const CompressWebpackPlugin = require('compression-webpack-plugin');
-const config = require('../config/index.js');
-const webpack = require('webpack');
-const { merge } = WebpackMerge;
+import baseWebpackConfig from './webpack.base.config';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import CompressWebpackPlugin from 'compression-webpack-plugin';
+import config from '../config/index';
+import webpack from 'webpack';
+import { merge } from 'webpack-merge';
 
-module.exports = merge(baseWebpackConfig, {
+export default merge(baseWebpackConfig, {
   mode: 'production',
   optimization: {
     splitChunks: {
@@ -35,20 +33,7 @@ module.exports = merge(baseWebpackConfig, {
         },
       },
     },
-    minimizer: [
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          output:{
-            comments:false // 删除注释
-          },
-          compress: {
-            drop_console: true, // 删除console
-            drop_debugger: false, // 删除debugger
-            pure_funcs: ['console.log'] //移除console
-          }
-        }
-      }),
-    ],
+    minimizer: [],
   },
   output: {
     path: config.build.assetsRoot,
