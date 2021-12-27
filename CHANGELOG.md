@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.4...v0.0.5) (2021-12-27)
+
+
+### ✨ Features | 新功能
+
+* api return type ([fd4b984](https://github.com/nanjingcaiyong/vue3-template/commit/fd4b98409e01d7257a99e9c290ddc5ccc4f2d4f5))
+
 ### [0.0.4](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.3...v0.0.4) (2021-12-09)
 
 ### [0.0.3](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.2...v0.0.3) (2021-12-09)
