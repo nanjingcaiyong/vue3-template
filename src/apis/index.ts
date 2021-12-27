@@ -1,6 +1,10 @@
-import axios, { IResponse } from '@utils/axios';
+import axios from '@utils/axios';
+import { AxiosRequestConfig } from 'axios';
 const files = require.context('.', true, /\.ts/);
-type Request = (params: any) => Promise<IResponse>
+
+type API = {
+  [key: string]: <T>(params: any, resetConfig?: AxiosRequestConfig ) => Promise<T>
+}
 
 const configs: ApiConfig[] = files
   .keys()
@@ -17,8 +21,9 @@ const configs: ApiConfig[] = files
     }, []
   );
 
-export default configs.reduce<{[key: string]: Request}>((modules, config) => {
+
+export default configs.reduce<API>((modules, config) => {
   const apiName = `${config.moduleName}_${config.name}`;
-  modules[apiName] = (params:any) => axios[config.type](config.path, params);
+  modules[apiName] = (params, resetConfig) => axios[config.type](config.path, params, resetConfig);
   return modules;
 }, {});
