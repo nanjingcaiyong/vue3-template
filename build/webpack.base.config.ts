@@ -23,10 +23,10 @@ function getEntries (rootName: string, moduleName: string) {
   if (fs.existsSync(rootName)) {
     return moduleName === undefined 
       ? fs.readdirSync(rootName).reduce((entry: any,pageName) => {
-        entry[pageName] = `./${rootName}/${pageName}/index.ts`;
+        entry[pageName] = `./${rootName}/${pageName}/main.ts`;
         return entry;
       }, {})
-      : {[moduleName]: `./${rootName}/${moduleName}/index.ts`};
+      : {[moduleName]: `./${rootName}/${moduleName}/main.ts`};
   }
   throw new Error('The pages folder is missing in the src directory');
 }

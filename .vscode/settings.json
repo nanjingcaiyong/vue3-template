@@ -12,7 +12,7 @@
   "files.autoSave": "afterDelay", // 选项卡失焦，自动保存
   "liveServer.settings.donotShowInfoMsg": true, // 关闭liveserver提示
   "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
+    "editor.defaultFormatter": "johnsoncodehk.volar"
   },
   "eslint.validate": [
     "typescript",
@@ -27,7 +27,7 @@
   "editor.fontFamily": "'Fira Code'", // 编辑器字体
   "editor.fontLigatures": true, // 是否启用字体连字，配和字体'Fira Code'使用
   "editor.tabSize": 2, // 一个tab两个空格
-  "editor.fontSize": 12, // 编辑器字体大小
+  "editor.fontSize": 20, // 编辑器字体大小
   "editor.mouseWheelZoom": true, // command缩放编辑器
   "editor.renderWhitespace": "trailing", // 代码前面缩进符, 无、空格、竖划线
   "editor.renderControlCharacters": true, // 是否显示控制字符。在编辑器中显示的像很小的BS, 表示backspace的意思。一般是在输入时，按了后退或者删除会偶尔出现这个字符。
@@ -47,5 +47,9 @@
     "FIG_NEW_SESSION": "1"
   },
   "workbench.colorTheme": "Community Material Theme Darker High Contrast",
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "i18n-ally.localesPaths": [
+    "src/language",
+    "src/pages/language"
+  ]
 }

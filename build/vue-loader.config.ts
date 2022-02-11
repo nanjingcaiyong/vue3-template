@@ -26,7 +26,16 @@ const cssLoaders = function (options:any) {
   return [
     generateLoaders('less'),
     generateLoaders('sass'),
-    generateLoaders('scss')
+    generateLoaders('scss'),
+    {
+      test: /\.css$/,
+      use:[
+        // MiniCssExtractPlugin.loader,
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader'
+      ] 
+    },
   ];
 };
 

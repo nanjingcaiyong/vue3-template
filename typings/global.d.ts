@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { AxiosInstance } from 'axios';
+import { AxiosRequestConfig } from 'axios';
 
 declare global {
   interface Window { 
@@ -11,6 +12,14 @@ declare global {
       name: string,
       id: string
     }
+  }
+
+  type API = {
+    [key: string]: <T>(params: any, resetConfig?: AxiosRequestConfig ) => Promise<T>
+  }
+
+  type $t = {
+    [key: string]: string
   }
 }
 declare module 'axios' {

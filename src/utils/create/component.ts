@@ -1,9 +1,9 @@
 import { App, defineComponent, ComponentOptions } from 'vue';
-export function createComponent(name: string) {
+export function createComponent (name: string) {
   const componentName = 'shopify-' + name;
   return {
     componentName,
-    create: function(_component: ComponentOptions) {
+    create: function (_component: ComponentOptions) {
       _component.baseName = name;
       _component.name = componentName;
       _component.install = (vue: App) => {
@@ -15,7 +15,7 @@ export function createComponent(name: string) {
       };
       return defineComponent(_component);
     } as typeof defineComponent,
-    createPage: function(_component: ComponentOptions) {
+    createPage: function (_component: ComponentOptions) {
       _component.baseName = name;
       _component.name = 'page-' + name;
       return defineComponent(_component);
