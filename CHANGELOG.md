@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.6...v0.0.7) (2022-02-11)
+
+
+### ✨ Features | 新功能
+
+* 多语言 ([dcd0adf](https://github.com/nanjingcaiyong/vue3-template/commit/dcd0adf2eec31391cf103c15af307b5864a60309))
+
 ### [0.0.6](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.5...v0.0.6) (2021-12-27)
 
 ### [0.0.5](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.4...v0.0.5) (2021-12-27)
