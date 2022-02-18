@@ -30,7 +30,7 @@ jobs:
         id: release_tag
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.VUE_TEMPLATE }} # 这块需要用到 github的token，因为需要对分之进行代码推送
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 这块需要用到 github的token，因为需要对分之进行代码推送
         with:
           tag_name: vitevui-v1
           release_name: Release vitevui-v1
