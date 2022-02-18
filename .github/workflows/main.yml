@@ -26,9 +26,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # 此次发布标签的名字
-          tag_name: 1.2.5
+          tag_name: ${{github.ref}}
           # 发布的名称
-          release_name: 1.2.5
+          release_name: ${{github.ref}}
           # 是否设置为预发布, ture或false, 默认为false
           prerelease: false
           # 发布内容的文本描述 如何用了body_path,此字段可不填
