@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # 此次发布标签的名字
-          tag_name: 1.2.3
+          tag_name: 1.2.4
           # 发布的名称
           release_name: 121.22
           # 是否设置为预发布, ture或false, 默认为false
