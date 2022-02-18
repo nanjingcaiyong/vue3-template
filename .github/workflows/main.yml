@@ -4,10 +4,6 @@ name: AUTO TAG
 on:
   push:
     branches: [ main ]
-  # 定时执行
-  schedule:
-    # 每5分钟执行一次工作流
-    - cron:  '*/5 * * * *'
 # 一个工作流运行由一个或多个可以顺序或并行运行的step组成
 jobs:
   first-step:
