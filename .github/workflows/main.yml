@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 这块需要用到 github的token，因为需要对分之进行代码推送
         with:
-          tag_name: ${{ steps.package-version.outputs.version }}
+          tag_name: ${{ github.ref }}
           release_name: Release vitevui-v1
           prerelease: false # 是否为预发布版本
           body: |
