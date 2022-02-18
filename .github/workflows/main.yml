@@ -30,10 +30,10 @@ jobs:
         id: release_tag
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }} # 这块需要用到 github的token，因为需要对分之进行代码推送
+          GITHUB_TOKEN: ${{ secrets.VUE_TEMPLATE }} # 这块需要用到 github的token，因为需要对分之进行代码推送
         with:
-          tag_name: vitevui-v${{ steps.package-version.outputs.version }}
-          release_name: Release vitevui-v${{ steps.package-version.outputs.version }}
+          tag_name: vitevui-v1
+          release_name: Release vitevui-v1
           prerelease: false # 是否为预发布版本
           body: |
             请点击查看 [更新日志](https://bhabgs.github.io/vite-vui-docs/components/log.html).
