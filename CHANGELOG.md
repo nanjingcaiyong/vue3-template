@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.25](https://github.com/nanjingcaiyong/vue3-template/compare/v3.0.5...v0.0.25) (2022-02-18)
+
 ### [0.0.24](https://github.com/nanjingcaiyong/vue3-template/compare/v3.0.4...v0.0.24) (2022-02-18)
 
 ### [0.0.23](https://github.com/nanjingcaiyong/vue3-template/compare/v3.0.3...v0.0.23) (2022-02-18)
