@@ -1,6 +1,6 @@
 {
   "name": "vue-mpa",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "main": "index.js",
   "scripts": {
     "dev": "npm run dev:sit",
