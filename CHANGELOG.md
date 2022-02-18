@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.7...v0.0.11) (2022-02-18)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* **release:** 0.0.10 ([b608f1b](https://github.com/nanjingcaiyong/vue3-template/commit/b608f1bbf883efdc809e3658aa55149b8413418e))
+* **release:** 0.0.8 ([b861327](https://github.com/nanjingcaiyong/vue3-template/commit/b861327384adefffe739f38162491119b08b3026))
+* **release:** 0.0.9 ([21a241b](https://github.com/nanjingcaiyong/vue3-template/commit/21a241b6d7dad0b135394c8dbfec757086317434))
+
 ### [0.0.10](https://github.com/nanjingcaiyong/vue3-template/compare/v0.0.7...v0.0.10) (2022-02-18)
 
 
